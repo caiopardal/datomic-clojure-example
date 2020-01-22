@@ -54,8 +54,7 @@
     (if (= 1 (count r))
       (first (first r)))))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; message db fns
+;;;;;;;;;;;;;;;;;;;;;;; message db fns
 
 (defn send-message! [conn from-id text & to-ids]
   (let [db (d/db conn)]

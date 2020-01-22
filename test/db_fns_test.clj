@@ -80,7 +80,7 @@
 
     (add! "pardal" "Caio"   "Pardal")
     (add! "joao" "Joao" "Fernandes")
-    (add! "floyd" "Floyd"  "Lawson")
+    (add! "andre" "Andre"  "Nieri")
 
     (send! "pardal" "Hey, how are you?"
            "joao")
@@ -88,10 +88,10 @@
            "pardal")
 
     (send! "joao" "We are about to change some lives!!!"
-           "pardal" "floyd")
+           "pardal" "andre")
 
-    (send! "floyd" "Let's rock this shit!"
-           "floyd")
+    (send! "andre" "Let's rock this shit!"
+           "andre")
 
     (let [db (d/db conn)]
 
@@ -102,9 +102,9 @@
              #{["joao" "We are about to change some lives!!!"]
                ["joao" "I'm fine, thanks! How about you?"]}))
 
-      (is (= (my-inbox db "floyd")
+      (is (= (my-inbox db "andre")
              #{["joao" "We are about to change some lives!!!"]
-               ["floyd"  "Let's rock this shit!"]})))))
+               ["andre"  "Let's rock this shit!"]})))))
 
 
 (deftest test-everyone-ive-messaged-with
